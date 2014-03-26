@@ -1,32 +1,27 @@
-## User Pack Template
+## Matlab Pack 
 
-This is a template for your own user (or other purpose) pack.
+Uses CVS to download the matlab-emacs library from sourceforge.net
 
-### init.el
+## Set-up
 
-Use the file `init.el` for your own configuration elisp. If this starts
-getting unwieldy then you might want to break out the config into
-separate files which you can store in the config directory.
+1) get matlab-emacs library (requires cvs) 
 
-### config
+    cd lib
+    chmod +x getmatlabemacs.sh
+    ./getmatlabemacs.sh
 
-Files placed in the `config` dir may then be referenced and pulled into
-your `init.el` via the fn `live-load-config-file`. For example, if you
-have the file config/foo.el then you may load it in with:
+2) add matlab-pack to your list of live-packs
 
-    (live-load-config-file "foo.el")
+3) restart emacs-live, now matlab-mode should be associated with .m files
 
-### lib
+4a) Run M-x matlab-shell to get an interactive prompt in emacs
 
- If you want to pull in external libraries into your pack, then you
- should place the libraries within the lib dir. To add a directory
- within the pack's lib directory to the Emacs load path (so that it's
- contents are available to require) you can use the fn
- `live-add-pack-lib`. For example, if you have the external library bar
- stored in lib which contains the file `baz.el` which you wish to
- require, this may be achieved by:
+4b) OR if you want to use your emacs daemon in the matlab gui:
 
-    (live-add-pack-lib "bar")
-    (require 'baz)
+add the following to your       
+    
+    addpath('~/.live-packs/matlab-pack/lib/matlab-emacs/toolbox','-begin');
+    rehash;
+    emacsinit;
 
- Have fun!
+
