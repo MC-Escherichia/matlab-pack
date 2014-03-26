@@ -1,3 +1,3 @@
-(live-pack-name "user-template-pack")
+(live-pack-name "matlab-pack")
 (live-pack-version "0.0.1alpha")
-(live-pack-description "Your own user pack - modify and customise this to your hearts content.")
+(live-pack-description "A pack for working with matlab files...run shellscript in lib folder to dl library")
