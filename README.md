@@ -2,6 +2,9 @@
 
 Uses CVS to download the matlab-emacs library from sourceforge.net
 
+This package was setup on Arch Linux with a matlab already installed. See the linked blog post to fix for windows, accepting pull requests. 
+
+Source: http://blogs.mathworks.com/community/2009/09/14/matlab-emacs-integration-is-back/
 ## Set-up
 
 1) get matlab-emacs library (requires cvs) 
