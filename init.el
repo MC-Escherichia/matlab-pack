@@ -15,6 +15,8 @@
 
 (load-library "matlab-load")
 (matlab-cedet-setup)
+(custom-set-variables
+ '(matlab-shell-command-switches '("-nodesktop -nosplash")))
 
 (setq auto-mode-alist
       (cons
